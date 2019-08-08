@@ -2,7 +2,9 @@
 
 ------------------------------------------------------------------------------------------------------------------------------
 #!3 FITNESSE KEYWORDS
+
 ![:
+
 |script   |: This key word must be the first row of every script table
 |check    |: If the word 'check' is in the first cell of a row, then a function call follows it. The last cell of the table is the expression we expect to be matched by what the function actually returns.
 |check not|: If the word 'check not' is in the first cell of a row, then a function call follows it. The last cell of the table is the expression we expect not to be matched by what the function actually returns.
