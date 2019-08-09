@@ -25,8 +25,9 @@
 
 # !3 FITNESSE CONFIGURATION
 ![:
-!define TEST_SYSTEM {slim}: Use the FitNesse SliM test system to run tests
-!path ${automated.testing.home}/**.jar: Define classpath for fixtures
+> !define TEST_SYSTEM {slim}: Use the FitNesse SliM test system to run tests
+
+> !path ${automated.testing.home}/**.jar: Define classpath for fixtures
 ]!
 
 # !3 INITIALIZATION
@@ -263,278 +264,283 @@
 `|verify report|REPORT_NAME or REPORT_NAME[INDEX]|is not present|`
 
 # !3 ACTIONS METHODS
-Click on an action. Use index notation to click on the 2nd, 3rd, ... action with the same label:
+- Click on an action. Use index notation to click on the 2nd, 3rd, ... action with the same label:
 
-|click on action|ACTION_NAME or ACTION_NAME[INDEX]|
+`|click on action|ACTION_NAME or ACTION_NAME[INDEX]|`
 
-Verify an action is present:
+- Verify an action is present:
 
-|verify action|ACTION_NAME or ACTION_NAME[INDEX]|is present|
+`|verify action|ACTION_NAME or ACTION_NAME[INDEX]|is present|`
 
-Verify an action is not present:
+- Verify an action is not present:
 
-|verify action|ACTION_NAME or ACTION_NAME[INDEX]|is not present|
+`|verify action|ACTION_NAME or ACTION_NAME[INDEX]|is not present|`
 
-Click on an actions application filter:
+- Click on an actions application filter:
 
-|click on application filter|APP_FILTER|
+`|click on application filter|APP_FILTER|`
 
-Verify an application is present:
+- Verify an application is present:
 
-|verify application filter|APPLICATION_NAME|is present|
+`|verify application filter|APPLICATION_NAME|is present|`
 
-Verify an application is not present:
+- Verify an application is not present:
 
-|verify application filter|APPLICATION_NAME|is not present|
+`|verify application filter|APPLICATION_NAME|is not present|`
 
 # !3 INTERFACE METHODS
-For populating all types of fields. When populating checkbox, radio, or select fields, [INDICES] can be used.  When populating picker fields the display value must be used:
+- For populating all types of fields. When populating checkbox, radio, or select fields, [INDICES] can be used.  When populating picker fields the display value must be used:
 
-|populate field|FIELD_LABEL or [INDEX] or FIELD_LABEL[INDEX]|with|VALUE(S)|
+`|populate field|FIELD_LABEL or [INDEX] or FIELD_LABEL[INDEX]|with|VALUE(S)|`
 
-Populate a field with a value that contains a comma:
+- Populate a field with a value that contains a comma:
 
-|populate field|FIELD_LABEL or [INDEX] or FIELD_LABEL[INDEX]|with value|VALUE|
+`|populate field|FIELD_LABEL or [INDEX] or FIELD_LABEL[INDEX]|with value|VALUE|`
 
-Populate the 1st, 2nd, 3rd, ... field of a specific type with no label, currently only compatible with FIELD_TYPE(s) of TEXT, PARAGRAPH, and FILE_UPLOAD. WARNING - Integer, Decimal, and Encrypted text fields will be considered as Text fields:
+- Populate the 1st, 2nd, 3rd, ... field of a specific type with no label, currently only compatible with FIELD_TYPE(s) of TEXT, PARAGRAPH, and FILE_UPLOAD. WARNING - Integer, Decimal, and Encrypted text fields will be considered as Text fields:
 
-|populate|FIELD_TYPE|field|[FIELD_INDEX]|with|VALUE(S)|
+`|populate|FIELD_TYPE|field|[FIELD_INDEX]|with|VALUE(S)|`
 
-Populate a field in a section with no label:
+- Populate a field in a section with no label:
 
-|populate field|FIELD_LABEL OR [FIELD_INDEX]|in section|SECTION_NAME|with|VALUE(S)|
+`|populate field|FIELD_LABEL OR [FIELD_INDEX]|in section|SECTION_NAME|with|VALUE(S)|`
 
-Populate a grid field with a value (Column and Row Numbers should be in square brackets []):
+- Populate a grid field with a value (Column and Row Numbers should be in square brackets []):
 
-|populate grid|GRID_NAME or [GRID_INDEX] or GRID_NAME[INDEX]|column|COLUMN_NAME or [COLUMN_INDEX]|row|[ROW_INDEX]|with|VALUE(S)|
+`|populate grid|GRID_NAME or [GRID_INDEX] or GRID_NAME[INDEX]|column|COLUMN_NAME or [COLUMN_INDEX]|row|[ROW_INDEX]|with|VALUE(S)|`
 
-Populate a picker field in a grid cell (Column and Row Numbers should be in square brackets []). This is useful when the picker field suggestions are only a partial match to the input values:
+- Populate a picker field in a grid cell (Column and Row Numbers should be in square brackets []). This is useful when the picker field suggestions are only a partial match to the input values:
 
-|populate grid|GRID_NAME or [GRID_INDEX] or GRID_NAME[INDEX]|column|COLUMN_NAME or [COLUMN_INDEX]|row|[ROW_INDEX]|with|VALUE(S)|partially matching picker field suggestion|
+`|populate grid|GRID_NAME or [GRID_INDEX] or GRID_NAME[INDEX]|column|COLUMN_NAME or [COLUMN_INDEX]|row|[ROW_INDEX]|with|VALUE(S)|partially matching picker field suggestion|`
 
-Populate a grid field with a single value:
+- Populate a grid field with a single value:
 
-|populate grid|GRID_NAME or [GRID_INDEX] or GRID_NAME[INDEX]|column|COLUMN_NAME or [COLUMN_INDEX]|row|[ROW_INDEX]|with value|VALUE|
+`|populate grid|GRID_NAME or [GRID_INDEX] or GRID_NAME[INDEX]|column|COLUMN_NAME or [COLUMN_INDEX]|row|[ROW_INDEX]|with value|VALUE|`
 
-Clear a field:
+- Clear a field:
 
-|clear field|FIELD_LABEL or [FIELD_INDEX] or FIELD_LABEL[INDEX]|
+`|clear field|FIELD_LABEL or [FIELD_INDEX] or FIELD_LABEL[INDEX]|`
 
-Remove a specific value from a picker:
+- Remove a specific value from a picker:
 
-|clear field|FIELD_LABEL or [FIELD_INDEX] or FIELD_LABEL[INDEX]|of|VALUE_TO_REMOVE|
+`|clear field|FIELD_LABEL or [FIELD_INDEX] or FIELD_LABEL[INDEX]|of|VALUE_TO_REMOVE|`
 
-Clear a grid field (Column and Row Numbers should be in square brackets []):
+- Clear a grid field (Column and Row Numbers should be in square brackets []):
 
-|clear grid|GRID_NAME or [GRID_INDEX] or GRID_NAME[INDEX]|column|COLUMN_NAME or [COLUMN_INDEX]|row|[ROW_INDEX]|
+`|clear grid|GRID_NAME or [GRID_INDEX] or GRID_NAME[INDEX]|column|COLUMN_NAME or [COLUMN_INDEX]|row|[ROW_INDEX]|`
 
-Use with FitNesse keyword 'check' to verify form title:
+- Use with FitNesse keyword 'check' to verify form title:
 
-|get form title|
+`|get form title|`
 
-Use with FitNesse keyword 'check' to verify form instructions:
+- Use with FitNesse keyword 'check' to verify form instructions:
 
-|get form instructions|
+`|get form instructions|`
 
-Use with FitNesse keyword 'check'  to verify values of field inputs:
+- Use with FitNesse keyword 'check'  to verify values of field inputs:
 
-|get field|FIELD_LABEL or [FIELD_INDEX] or FIELD_LABEL[INDEX]|value|
+`|get field|FIELD_LABEL or [FIELD_INDEX] or FIELD_LABEL[INDEX]|value|`
 
-Use with FitNesse keyword 'check' to verify values of field inputs in a section:
+- Use with FitNesse keyword 'check' to verify values of field inputs in a section:
 
-|get field|FIELD_LABEL or FIELD_LABEL[INDEX]|in section|SECTION_NAME|value|
+`|get field|FIELD_LABEL or FIELD_LABEL[INDEX]|in section|SECTION_NAME|value|`
 
-Return the validation messages from a field. Multiple messages will be concatenated with a comma:
+- Return the validation messages from a field. Multiple messages will be concatenated with a comma:
 
-|get field|FIELD_LABEL or [FIELD_INDEX] or FIELD_LABEL[INDEX]|validation message|
+`|get field|FIELD_LABEL or [FIELD_INDEX] or FIELD_LABEL[INDEX]|validation message|`
 
-Return the link URL:
+- Return the link URL:
 
-|get link|LINK_NAME or LINK_NAME[INDEX]|url|
+`|get link|LINK_NAME or LINK_NAME[INDEX]|url|`
 
-Return the current step of the milestone:
+- Return the current step of the milestone:
 
-|get milestone|MILESTONE_NAME or MILESTONE_NAME[INDEX] or [MILESTONE_INDEX]|step|
+`|get milestone|MILESTONE_NAME or MILESTONE_NAME[INDEX] or [MILESTONE_INDEX]|step|`
 
-Return the value from a grid cell:
+- Return the value from a grid cell:
 
-|get grid|GRID_NAME or [GRID_INDEX] or GRID_NAME[INDEX]|column|COLUMN_NAME or [COLUMN_INDEX]|row|[ROW_INDEX]|value|
+`|get grid|GRID_NAME or [GRID_INDEX] or GRID_NAME[INDEX]|column|COLUMN_NAME or [COLUMN_INDEX]|row|[ROW_INDEX]|value|`
 
-Return the stored total count:
+- Return the stored total count:
 
-|get grid|GRID_NAME or [GRID_INDEX] or GRID_NAME[INDEX]|total count|
+`|get grid|GRID_NAME or [GRID_INDEX] or GRID_NAME[INDEX]|total count|`
 
-Return the stored grid current page row count:
+- Return the stored grid current page row count:
 
-|get grid|GRID_NAME or [GRID_INDEX] or GRID_NAME[INDEX]|row count|
+`|get grid|GRID_NAME or [GRID_INDEX] or GRID_NAME[INDEX]|row count|`
 
-Return data, from a from a form title, as a variable using Java Regular Expression:
+- Return data, from a from a form title, as a variable using Java Regular Expression:
 
-|get regex|REGEX|group|GROUP|from form title|
+`|get regex|REGEX|group|GROUP|from form title|`
 
-Return data, from a form field, as a variable using Java Regular Expression:
+- Return data, from a form field, as a variable using Java Regular Expression:
 
-|get regex|REGEX|group|GROUP|from field|FIELD_NAME|value|
+`|get regex|REGEX|group|GROUP|from field|FIELD_NAME|value|`
 
-Return data, from a form field in a section, as a variable using Java Regular Expression:
+- Return data, from a form field in a section, as a variable using Java Regular Expression:
 
-|get regex|REGEX|group|GROUP|from field|FIELD_NAME|in section|SECTION_NAME|value|
+`|get regex|REGEX|group|GROUP|from field|FIELD_NAME|in section|SECTION_NAME|value|`
 
-Return data, from a form grid, as a variable using Java Regular Expression:
+- Return data, from a form grid, as a variable using Java Regular Expression:
 
-|get regex|REGEX|group|GROUP|from grid|GRID_NAME or [GRID_INDEX] or GRID_NAME[INDEX]|column|COLUMN_NAME_OR_INDEX|Row|[Row_Number]|value|
+`|get regex|REGEX|group|GROUP|from grid|GRID_NAME or [GRID_INDEX] or GRID_NAME[INDEX]|column|COLUMN_NAME_OR_INDEX|Row|[Row_Number]|value|`
 
-Verify field contains value:
+- Verify field contains value:
 
-|verify field|FIELD_LABEL or [FIELD_INDEX] or FIELD_LABEL[INDEX]|contains|VALUES()|
+`|verify field|FIELD_LABEL or [FIELD_INDEX] or FIELD_LABEL[INDEX]|contains|VALUES()|`
 
-Verify field value if it contains a comma:
+- Verify field value if it contains a comma:
 
-|verify field|FIELD_LABEL or [FIELD_INDEX] or FIELD_LABEL[INDEX]|contains value|VALUE|
+`|verify field|FIELD_LABEL or [FIELD_INDEX] or FIELD_LABEL[INDEX]|contains value|VALUE|`
 
-Verify field in section contains a value:
+- Verify field in section contains a value:
 
-|verify field|FIELD_LABEL or [FIELD_INDEX]|in section|SECTION_NAME|contains|VALUE(S)|
+`|verify field|FIELD_LABEL or [FIELD_INDEX]|in section|SECTION_NAME|contains|VALUE(S)|`
 
-Verify field with label is present:
+- Verify field with label is present:
 
-|verify field|FIELD_LABEL or [FIELD_INEDX] or FIELD_LABEL[INDEX]|is present|
+`|verify field|FIELD_LABEL or [FIELD_INEDX] or FIELD_LABEL[INDEX]|is present|`
 
-Verify field with label is not present:
+- Verify field with label is not present:
 
-|verify field|FIELD_LABEL or [FIELD_INEDX] or FIELD_LABEL[INDEX]|is not present|
+`|verify field|FIELD_LABEL or [FIELD_INEDX] or FIELD_LABEL[INDEX]|is not present|`
 
-Verify field with label contains a specific validation message:
+- Verify field with label contains a specific validation message:
 
-|verify field|FIELD_LABEL or [FIELD_INDEX] or FIELD_LABEL[INDEX]|contains validation message|VALIDATION_MESSAGE(S)|
+`|verify field|FIELD_LABEL or [FIELD_INDEX] or FIELD_LABEL[INDEX]|contains validation message|VALIDATION_MESSAGE(S)|`
 
-Verify link containing text is present:
+- Verify link containing text is present:
 
-|verify link|LINK_TEXT or LINK_TEXT[INDEX]|is present|
+`|verify link|LINK_TEXT or LINK_TEXT[INDEX]|is present|`
 
-Verify link URL contains specific text:
+- Verify link URL contains specific text:
 
-|verify link|LINK_TEXT or LINK_TEXT[INDEX]|URL contains|URL_TEXT|
+`|verify link|LINK_TEXT or LINK_TEXT[INDEX]|URL contains|URL_TEXT|`
 
-Verify a milestone is at a particular step:
+- Verify a milestone is at a particular step:
 
-|verify milestone|MILESTONE_LABEL OR MILESTONE_LABEL[INDEX] or [MILESTONE_INDEX]|step is|STEP|
+`|verify milestone|MILESTONE_LABEL OR MILESTONE_LABEL[INDEX] or [MILESTONE_INDEX]|step is|STEP|`
 
-Verify button with label is present:
+- Verify button with label is present:
 
-|verify button|BUTTON_NAME or BUTTON_NAME[INDEX]|is present|
+`|verify button|BUTTON_NAME or BUTTON_NAME[INDEX]|is present|`
 
-Verify button with label is not present:
+- Verify button with label is not present:
 
-|verify button|BUTTON_NAME or BUTTON_NAME[INDEX]|is not present|
+`|verify button|BUTTON_NAME or BUTTON_NAME[INDEX]|is not present|`
 
-Verify section with label contains a specific validation message:
+- Verify section with label contains a specific validation message:
 
-|verify section|SECTION_NAME|contains validation message|VALIDATION_MESSAGE(S)|
+`|verify section|SECTION_NAME|contains validation message|VALIDATION_MESSAGE(S)|`
 
-Verify a grid field contains a value (Column and Row Numbers should be in square brackets []):
+- Verify a grid field contains a value (Column and Row Numbers should be in square brackets []):
 
-|verify grid|GRID_NAME or [GRID_INDEX] or GRID_NAME[INDEX]|column|COLUMN_NAME or [COLUMN_INDEX]|row|[ROW_INDEX]|contains|VALUE(S)|
+`|verify grid|GRID_NAME or [GRID_INDEX] or GRID_NAME[INDEX]|column|COLUMN_NAME or [COLUMN_INDEX]|row|[ROW_INDEX]|contains|VALUE(S)|`
 
-Verify a grid field contains a single value:
+- Verify a grid field contains a single value:
 
-|verify grid|GRID_NAME or [GRID_INDEX] or GRID_NAME[INDEX]|column|COLUMN_NAME or [COLUMN_INDEX]|row|[ROW_INDEX]|contains value|VALUE|
+`|verify grid|GRID_NAME or [GRID_INDEX] or GRID_NAME[INDEX]|column|COLUMN_NAME or [COLUMN_INDEX]|row|[ROW_INDEX]|contains value|VALUE|`
 
-Verify if row in grid is selected (Row Numbers should be in square brackets []):
+- Verify if row in grid is selected (Row Numbers should be in square brackets []):
 
-|verify grid|GRID_NAME or [GRID_INDEX] or GRID_NAME[INDEX]|row|[ROW_INDEX]|is selected|
+`|verify grid|GRID_NAME or [GRID_INDEX] or GRID_NAME[INDEX]|row|[ROW_INDEX]|is selected|`
 
-Verify a chart with given label is present:
+- Verify a chart with given label is present:
 
-|verify chart|CHART_LABEL|is present|
+`|verify chart|CHART_LABEL|is present|`
 
-Verify a chart with given label is not present:
+- Verify a chart with given label is not present:
 
-|verify chart|CHART_LABEL|is not present|
+`|verify chart|CHART_LABEL|is not present|`
 
-Verify a video with given source is present. You can provide a substring of the source:
+- Verify a video with given source is present. You can provide a substring of the source:
 
-|verify video|VIDEO_SOURCE or VIDEO_SOURCE[INDEX]|is present|
+`|verify video|VIDEO_SOURCE or VIDEO_SOURCE[INDEX]|is present|`
 
-Verify a video with given label is not present. You can provide a substring of the source:
+- Verify a video with given label is not present. You can provide a substring of the source:
 
-|verify video|VIDEO_SOURCE or VIDEO_SOURCE[INDEX]|is not present|
+`|verify video|VIDEO_SOURCE or VIDEO_SOURCE[INDEX]|is not present|`
 
-Verify a web content with given source is present. You can provide a substring of the source:
+- Verify a web content with given source is present. You can provide a substring of the source:
 
-|verify web content|WEB_CONTENT_SOURCE or WEB_CONTENT_SOURCE[INDEX]|is present|
+`|verify web content|WEB_CONTENT_SOURCE or WEB_CONTENT_SOURCE[INDEX]|is present|`
 
-Verify a web content with given source is not present. You can provide a substring of the source:
+- Verify a web content with given source is not present. You can provide a substring of the source:
 
-|verify web content|WEB_CONTENT_SOURCE or WEB_CONTENT_SOURCE[INDEX]|is not present|
+`|verify web content|WEB_CONTENT_SOURCE or WEB_CONTENT_SOURCE[INDEX]|is not present|`
 
-Click on the save changes link:
+- Click on the save changes link:
 
-|click on save changes|
+`|click on save changes|`
 
-Click on button:
+- Click on button:
 
-|click on button|BUTTON_NAME or BUTTON_NAME[INDEX]|
+`|click on button|BUTTON_NAME or BUTTON_NAME[INDEX]|`
 
-Click on a link:
+- Click on a link:
 
-|click on link|LINK_NAME or LINK_NAME[INDEX]|
+`|click on link|LINK_NAME or LINK_NAME[INDEX]|`
 
-Click on a milestone step:
+- Click on a milestone step:
 
-|click on milestone|MILESTONE_NAME or MILESTONE_NAME[INDEX] or [MILESTONE_INDEX]|step|STEP|
+`|click on milestone|MILESTONE_NAME or MILESTONE_NAME[INDEX] or [MILESTONE_INDEX]|step|STEP|`
 
-Select a radio option:
+- Select a radio option:
 
-|click on radio option|RADIO_OPTION or RADIO_OPTION[INDEX]|
+`|click on radio option|RADIO_OPTION or RADIO_OPTION[INDEX]|`
 
-Check a checkbox option with the given choice label:
+- Check a checkbox option with the given choice label:
 
-|click on checkbox option|CHECKBOX_OPTION or CHECKBOX_OPTION[INDEX]|
+`|click on checkbox option|CHECKBOX_OPTION or CHECKBOX_OPTION[INDEX]|`
 
-Click on an image or text link in a grid cell. Useful for clicking the "delete row" X cell to delete a row:
+- Click on an image or text link in a grid cell. Useful for clicking the "delete row" X cell to delete a row:
 
-|click on grid|GRID_NAME or GRID_NAME[INDEX] or [GRID_INDEX]|column|COLUMN_NAME or [COLUMN_INDEX]|row|[ROW_INDEX]|
+`|click on grid|GRID_NAME or GRID_NAME[INDEX] or [GRID_INDEX]|column|COLUMN_NAME or [COLUMN_INDEX]|row|[ROW_INDEX]|`
 
-Click on the add row link for a grid:
+- Click on the add row link for a grid:
 
-|click on grid|GRID_NAME or [GRID_INDEX] or GRID_NAME[INDEX]|add row link|
+`|click on grid|GRID_NAME or [GRID_INDEX] or GRID_NAME[INDEX]|add row link|`
 
-Navigate through pages of a grid. Valid navigations are "first", previous, next, or "last":
+- Navigate through pages of a grid. Valid navigations are "first", previous, next, or "last":
 
-|click on grid|GRID_NAME or [GRID_INDEX] or GRID_NAME[INDEX]|navigation|NAV_REFERENCE|
+`|click on grid|GRID_NAME or [GRID_INDEX] or GRID_NAME[INDEX]|navigation|NAV_REFERENCE|`
 
-Click on a card:
+- Click on a card:
 
-|click on card|CARD_LINK_NAME or CARD_LINK_NAME[INDEX]|
+`|click on card|CARD_LINK_NAME or CARD_LINK_NAME[INDEX]|`
 
-Toggle visibility of section:
+- Toggle visibility of section:
 
-|toggle section|SECTION_NAME|visibility|
+`|toggle section|SECTION_NAME|visibility|`
 
-Toggle visibility of box:
+- Toggle visibility of box:
 
-|toggle box|BOX_NAME  or [BOX_INDEX] or BOX_NAME[INDEX]|visibility|
+`|toggle box|BOX_NAME  or [BOX_INDEX] or BOX_NAME[INDEX]|visibility|`
 
-Select row in grid (Row Numbers should be in square brackets []):
+- Select row in grid (Row Numbers should be in square brackets []):
 
-|select grid|GRID_NAME or [GRID_INDEX] or GRID_NAME[INDEX]|row|[ROW_INDEX]|
+`|select grid|GRID_NAME or [GRID_INDEX] or GRID_NAME[INDEX]|row|[ROW_INDEX]|`
 
-Select all rows in a grid.  Can also be used to de-select all rows:
+- Select all rows in a grid.  Can also be used to de-select all rows:
 
-|select all rows in grid|GRID_NAME or [GRID_INDEX] or GRID_NAME[INDEX]|
+`|select all rows in grid|GRID_NAME or [GRID_INDEX] or GRID_NAME[INDEX]|`
 
-Sort grid by column name:
+- Sort grid by column name:
 
-|sort grid|GRID_NAME or [GRID_INDEX] or GRID_NAME[INDEX]|by column|COLUMN_NAME|
+`|sort grid|GRID_NAME or [GRID_INDEX] or GRID_NAME[INDEX]|by column|COLUMN_NAME|`
 
-Return count of rows in an editable or paging grid:
+- Return count of rows in an editable or paging grid:
 
-|count grid|GRID_NAME or [GRID_INDEX] or GRID_NAME[INDEX]|rows|
+`|count grid|GRID_NAME or [GRID_INDEX] or GRID_NAME[INDEX]|rows|`
 
-Store in the defined variable the index of the grid that matches that list of header labels separated by ";". The list of headers can be a subset but must start from the left. The wildcard "*" can be used if a header doesn't have a label. In the gridField the selectable column counts as the first column. The method will return a value if only one grid is matched:
+- Store in the defined variable the index of the grid that matches that list of header labels separated by ";". The list of headers can be a subset but must start from the left. The wildcard "*" can be used if a header doesn't have a label. In the gridField the selectable column counts as the first column. The method will return a value if only one grid is matched:
 
-|$<variable>=|get Grid Index|* ; Header 2|
+```
+|$<variable
+>=|get Grid Index|* ; Header 2|
+```
+
+# Malatesh could this code be in the same line?
 
 # !3 SITES METHODS
 Navigate to an Appian Site:
