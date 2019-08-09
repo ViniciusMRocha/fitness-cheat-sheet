@@ -2,15 +2,25 @@
 
 ------------------------------------------------------------------------------------------------------------------------------
 # !3 FITNESSE KEYWORDS
+
 > ![:
+
 > |script   |: This key word must be the first row of every script table
+
 > |check    |: If the word 'check' is in the first cell of a row, then a function call follows it. The last cell of the table is the expression we expect to be matched by what the function actually returns.
+
 > |check not|: If the word 'check not' is in the first cell of a row, then a function call follows it. The last cell of the table is the expression we expect not to be matched by what the function actually returns.
+
 > |ensure   |: If the word 'ensure' is in the first cell, then it should be followed by a function that should return a boolean true for green and false for red.
+
 > |reject   |: If the word 'reject' is in the first cell, then it should be followed by a function that should return a boolean false for green and true for red.
+
 > |note     |: If the word 'note' is in the first cell, all other cells in that row will be ignored. Also works if the first cell is blank or begins with # or *.
+
 > |show     |: If the word 'show' is in the first cell, then it should be followed by a function. A new cell will be added when the test is run, and it will contain the return value of the function.
+
 > |$VAR=    |: If a symbol assignment is in the first cell, then it should be followed by a function. The symbol is assigned the value returned by that function.
+
 > ]!
 
 # !3 FITNESSE CONFIGURATION
