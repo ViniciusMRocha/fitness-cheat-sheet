@@ -541,8 +541,6 @@
 >=|get Grid Index|* ; Header 2|
 ```
 
-# Malatesh could this code be in the same line?
-
 # !3 SITES METHODS
 - Navigate to an Appian Site:
 
@@ -715,6 +713,10 @@ Do we need the _!3_ before teh titles
 - if not let's number them
 
 Do we need the _![:_ and _]!_?
+
+Could line 540 be in one line?
+
+Do need the subsection on line 254?
 
 ----------------------------------------------------------------------------------------------------------------
 
