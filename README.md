@@ -1,2 +1,2 @@
-# fitness-cheat-sheet
-Fitness functions website
+# Fitness Cheat Sheet
+Appian automated test platform 
