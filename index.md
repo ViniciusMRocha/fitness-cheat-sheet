@@ -51,143 +51,143 @@
 ```|setup login with username field|<field ID/Name/Value attribute>|and password field|<field ID/Name/Value attribute>|and login button|<field ID/Name/Value attribute>|```
 
 # !3 NAVIGATION METHODS
-Navigate to tempo tab:
+- Navigate to tempo tab:
 
-|click on menu|TEMPO_MENU_NAME|
+`|click on menu|TEMPO_MENU_NAME|`
 
-Search for a term on News, Reports, or Record List:
+- Search for a term on News, Reports, or Record List:
 
-|search for|SEARCH_TERM|
+`|search for|SEARCH_TERM|`
 
 # !3 NEWS METHODS
-Verify a news post containing specific text is present. The method will wait for the timeout period and refresh up to the configured number of refresh times before failing:
+- Verify a news post containing specific text is present. The method will wait for the timeout period and refresh up to the configured number of refresh times before failing:
 
-|verify news feed containing text|NEWS_TEXT|is present|
+`|verify news feed containing text|NEWS_TEXT|is present|`
 
-Verify a news post containing specific text is not present:
+- Verify a news post containing specific text is not present:
 
-|verify news feed containing text|NEWS_TEXT|is not present|
+`|verify news feed containing text|NEWS_TEXT|is not present|`
 
-Verify a news post containing specific text with a specific label and value is present:
+- Verify a news post containing specific text with a specific label and value is present:
 
-|verify news feed containing text|NEWS_TEXT|and more info with label|LABEL|and value|VALUE|is present|
+`|verify news feed containing text|NEWS_TEXT|and more info with label|LABEL|and value|VALUE|is present|`
 
-Verify a news post containing specific text with a specific tag is present:
+- Verify a news post containing specific text with a specific tag is present:
 
-|verify news feed containing text|NEWS_TEXT|tagged with|TAG_NAME|is present|
+`|verify news feed containing text|NEWS_TEXT|tagged with|TAG_NAME|is present|`
 
-Verify a news post with a particular title and comment is present:
+- Verify a news post with a particular title and comment is present:
 
-|verify news feed containing text|NEWS_TEXT|commented with|COMMENT|is present|
+`|verify news feed containing text|NEWS_TEXT|commented with|COMMENT|is present|`
 
-Clicks on the posted link for a news post containing the specific text and verifies that the browser is directed to a URL with the appropriate ID
+- Clicks on the posted link for a news post containing the specific text and verifies that the browser is directed to a URL with the appropriate ID
 
-|verify news feed containing|MESSAGE|link navigation|
+`|verify news feed containing|MESSAGE|link navigation|`
 
-Hover over the user profile circle on a news post containing specific text:
+- Hover over the user profile circle on a news post containing specific text:
 
-|verify hover over news poster circle on post containing|MESSAGE|
+`|verify hover over news poster circle on post containing|MESSAGE|`
 
-Hover over the user profile link on a news post containing specific text:
+- Hover over the user profile link on a news post containing specific text:
 
-|verify hover over news poster link on post containing|MESSAGE|
+`|verify hover over news poster link on post containing|MESSAGE|`
 
-Verify that a news post containing specific text is starred:
+- Verify that a news post containing specific text is starred:
 
-|verify post|MESSAGE|is starred|
+`|verify post|MESSAGE|is starred|`
 
-Click on the record tag on a particular news post:
+- Click on the record tag on a particular news post:
 
-|click on news feed|NEWS_TEXT|record tag|RECORD_TAG|
+`|click on news feed|NEWS_TEXT|record tag|RECORD_TAG|`
 
-Click the user profile circle on a news post containing specific text:
+- Click the user profile circle on a news post containing specific text:
 
-|click user profile circle on post containing|MESSAGE|
+`|click user profile circle on post containing|MESSAGE|`
 
-Click the user profile link on a news post containing specific text:
+- Click the user profile link on a news post containing specific text:
 
-|click user profile link on post containing|MESSAGE|
+`|click user profile link on post containing|MESSAGE|`
 
-Toggle the 'more info' on a news post containing specific text:
+- Toggle the 'more info' on a news post containing specific text:
 
-|toggle more info for news feed containing text|NEWS_TEXT|
+`|toggle more info for news feed containing text|NEWS_TEXT|`
 
-Delete a news post:
+- Delete a news post:
 
-|delete news post|NEWS_TEXT|
+`|delete news post|NEWS_TEXT|`
 
-Return a string that matches the regex. This could be useful in extracting a system generated value from the news feed:
+- Return a string that matches the regex. This could be useful in extracting a system generated value from the news feed:
 
-|get regex|REGEX|group|GROUP|from news feed containing text|NEWS_TEXT|
+`|get regex|REGEX|group|GROUP|from news feed containing text|NEWS_TEXT|`
 
-Return a string that matches the regex from a comment. This could be useful in extracting a system generated value from the news feed:
+- Return a string that matches the regex from a comment. This could be useful in extracting a system generated value from the news feed:
 
-|get regex|REGEX|group|GROUP|from news feed containing text|NEWS_TEXT|commented with|COMMENT|
+`|get regex|REGEX|group|GROUP|from news feed containing text|NEWS_TEXT|commented with|COMMENT|`
 
-Send a news post to a list of participants:
+- Send a news post to a list of participants:
 
-|send post|MESSAGE|to|RECIPIENTS|
+`|send post|MESSAGE|to|RECIPIENTS|`
 
-Post a kudos message about a user:
+- Post a kudos message about a user:
 
-|send kudos|MESSAGE|to|RECIPIENT|
+`|send kudos|MESSAGE|to|RECIPIENT|`
 
-Send a locked or unlocked news post to a list of recipients:
+- Send a locked or unlocked news post to a list of recipients:
 
-|send|LOCKED or UNLOCKED|message|MESSAGE|to|RECIPIENTS|
+`|send|LOCKED or UNLOCKED|message|MESSAGE|to|RECIPIENTS|`
 
-Add a comment to a news post containing specific text:
+- Add a comment to a news post containing specific text:
 
-|add comment|COMMENT|to post containing|MESSAGE|
+`|add comment|COMMENT|to post containing|MESSAGE|`
 
-Star a news post containing specific text:
+- Star a news post containing specific text:
 
-|star post containing|MESSAGE|
+`|star post containing|MESSAGE|`
 
-Filter news feed on supplied filter:
+- Filter news feed on supplied filter:
 
-|filter news on|FILTER_NAME|
+`|filter news on|FILTER_NAME|`
 
 # !3 TASKS METHODS
-Click on the supplied task name:
+- Click on the supplied task name:
 
-|click on task|TASK_NAME or TASK_NAME[INDEX]|
+`|click on task|TASK_NAME or TASK_NAME[INDEX]|`
 
-Click on task report:
+- Click on task report:
 
-|click on task report|TASK_REPORT_NAME|
+`|click on task report|TASK_REPORT_NAME|`
 
-Verify if task is present in the user interface. This is useful for determining if security is applied correctly:
+- Verify if task is present in the user interface. This is useful for determining if security is applied correctly:
 
-|verify task|TASK_NAME or TASK_NAME[INDEX]|is present|
+`|verify task|TASK_NAME or TASK_NAME[INDEX]|is present|`
 
-Verify if task is not present in the user interface. This is useful for determining if security is applied correctly:
+- Verify if task is not present in the user interface. This is useful for determining if security is applied correctly:
 
-|verify task|TASK_NAME or TASK_NAME[INDEX]|is not present|
+`|verify task|TASK_NAME or TASK_NAME[INDEX]|is not present|`
 
-Verify a task with a specific name has a specific deadline (e.g. 1h):
+- Verify a task with a specific name has a specific deadline (e.g. 1h):
 
-|verify task|TASK_NAME or TASK_NAME[INDEX]|has a deadline of|DEADLINE_TEXT|
+`|verify task|TASK_NAME or TASK_NAME[INDEX]|has a deadline of|DEADLINE_TEXT|`
 
-Return data, from a task, as a variable using Java Regular Expression:
+- Return data, from a task, as a variable using Java Regular Expression:
 
-|get regex|REGEX|group|GROUP|from task name containing text|TASK_TEXT|
+`|get regex|REGEX|group|GROUP|from task name containing text|TASK_TEXT|`
 
-Accept a task. This will not return error if task is already accepted:
+- Accept a task. This will not return error if task is already accepted:
 
-|accept task|
+`|accept task|`
 
-Send a task from the news message box:
+- Send a task from the news message box:
 
-|send task|TASK_MESSAGE|to|RECIPIENT|
+`|send task|TASK_MESSAGE|to|RECIPIENT|`
 
-Close the social task containing supplied text and add a comment:
+- Close the social task containing supplied text and add a comment:
 
-|close social task containing|MESSAGE|with comment|COMMENT|
+`|close social task containing|MESSAGE|with comment|COMMENT|`
 
-Verify a social task item containing specific text is not present:
+- Verify a social task item containing specific text is not present:
 
-|verify task feed containing text|TASK_TEXT|is not present|
+`|verify task feed containing text|TASK_TEXT|is not present|`
 
 # !3 RECORDS METHODS
 ## !4 RECORD LIST
