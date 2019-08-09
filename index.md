@@ -2,9 +2,8 @@
 
 ------------------------------------------------------------------------------
 
-# !3 FITNESSE KEYWORDS
+# FITNESSE KEYWORDS
 
-![:
 
 > |**script**   | This key word must be the first row of every script table
 
@@ -22,16 +21,13 @@
 
 > |**$VAR=**    | If a symbol assignment is in the first cell, then it should be followed by a function. The symbol is assigned the value returned by that function.
 
-]!
 
-# !3 FITNESSE CONFIGURATION
-![:
+# FITNESSE CONFIGURATION
 > !define TEST_SYSTEM {slim}: Use the FitNesse SliM test system to run tests
 
 > !path ${automated.testing.home}/**.jar: Define classpath for fixtures
-]!
 
-# !3 INITIALIZATION
+# INITIALIZATION
 - Initialize !-BaseFixture-! instance that provides access to methods defined in !-BaseFixture.java-!:
 
 `|script|com.appiancorp.ps.automatedtest.fixture.BaseFixture|`
@@ -52,7 +48,7 @@
 
 ```|setup login with username field|<field ID/Name/Value attribute>|and password field|<field ID/Name/Value attribute>|and login button|<field ID/Name/Value attribute>|```
 
-# !3 NAVIGATION METHODS
+# NAVIGATION METHODS
 - Navigate to tempo tab:
 
 `|click on menu|TEMPO_MENU_NAME|`
@@ -61,7 +57,7 @@
 
 `|search for|SEARCH_TERM|`
 
-# !3 NEWS METHODS
+# NEWS METHODS
 - Verify a news post containing specific text is present. The method will wait for the timeout period and refresh up to the configured number of refresh times before failing:
 
 `|verify news feed containing text|NEWS_TEXT|is present|`
@@ -150,7 +146,7 @@
 
 `|filter news on|FILTER_NAME|`
 
-# !3 TASKS METHODS
+# TASKS METHODS
 - Click on the supplied task name:
 
 `|click on task|TASK_NAME or TASK_NAME[INDEX]|`
@@ -191,8 +187,8 @@
 
 `|verify task feed containing text|TASK_TEXT|is not present|`
 
-# !3 RECORDS METHODS
-## !4 RECORD LIST
+# RECORDS METHODS
+## RECORD LIST
 - Click on a record type, use RECORD_NAME[INDEX] to click on the 2nd, 3rd, ... record type with the same label:
 
 `|click on record type|RECORD_TYPE_NAME or RECORD_TYPE_NAME[INDEX]|`
@@ -225,7 +221,7 @@
 
 `|sort record grid by column|COLUMN_NAME|`
 
-## !4 RECORD DASHBOARD
+## RECORD DASHBOARD
 - Click on a record. Works for both record list view and record grid view:
 
 `|click on record|RECORD_NAME or RECORD_NAME[INDEX] or [INDEX]|`
@@ -250,8 +246,8 @@
 
 `|get regex|REGEX|group|GROUP|from record name containing text|RECORD_TEXT|`
 
-# !3 REPORTS METHODS
-## !4 REPORT LIST
+# REPORTS METHODS
+## REPORT LIST
 - Click on a report:
 
 `|click on report|REPORT_NAME or REPORT_NAME[INDEX]|`
@@ -264,7 +260,7 @@
 
 `|verify report|REPORT_NAME or REPORT_NAME[INDEX]|is not present|`
 
-# !3 ACTIONS METHODS
+# ACTIONS METHODS
 - Click on an action. Use index notation to click on the 2nd, 3rd, ... action with the same label:
 
 `|click on action|ACTION_NAME or ACTION_NAME[INDEX]|`
@@ -289,7 +285,7 @@
 
 `|verify application filter|APPLICATION_NAME|is not present|`
 
-# !3 INTERFACE METHODS
+# INTERFACE METHODS
 - For populating all types of fields. When populating checkbox, radio, or select fields, [INDICES] can be used.  When populating picker fields the display value must be used:
 
 `|populate field|FIELD_LABEL or [INDEX] or FIELD_LABEL[INDEX]|with|VALUE(S)|`
@@ -536,12 +532,9 @@
 
 - Store in the defined variable the index of the grid that matches that list of header labels separated by ";". The list of headers can be a subset but must start from the left. The wildcard "*" can be used if a header doesn't have a label. In the gridField the selectable column counts as the first column. The method will return a value if only one grid is matched:
 
-```
-|$<variable
->=|get Grid Index|* ; Header 2|
-```
+`|$<variable>=|get Grid Index|* ; Header 2|`
 
-# !3 SITES METHODS
+# SITES METHODS
 - Navigate to an Appian Site:
 
 `|navigate to site|SITE_URL|`
@@ -566,7 +559,7 @@
 
 `|use discoverability to navigate to|SITE_NAME|`
 
-# !3 UTILITY METHODS
+# UTILITY METHODS
 - Initialize Selenium Web Driver and open browser. Options include FIREFOX, CHROME:
 
 `|setup with|BROWSER_NAME|browser|`
@@ -707,52 +700,6 @@
 
 `|verify text|TEXT_ON_INTERFACE|is present|`
 
-# Questions for Malatesh
-
-Do we need the _!3_ before teh titles
-- if not let's number them
-
-Do we need the _![:_ and _]!_?
-
-Could line 540 be in one line?
-
-Do need the subsection on line 254?
-
 ----------------------------------------------------------------------------------------------------------------
 
 
-You can use the [editor on GitHub](https://github.com/ViniciusMRocha/fitness-cheat-sheet/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown Cheat Sheet
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ViniciusMRocha/fitness-cheat-sheet/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
