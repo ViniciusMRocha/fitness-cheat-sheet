@@ -31,25 +31,28 @@
 ]!
 
 # !3 INITIALIZATION
-Initialize !-BaseFixture-! instance that provides access to methods defined in !-BaseFixture.java-!:
+- Initialize !-BaseFixture-! instance that provides access to methods defined in !-BaseFixture.java-!:
 
-|script|com.appiancorp.ps.automatedtest.fixture.BaseFixture|
+> |script|com.appiancorp.ps.automatedtest.fixture.BaseFixture|
 
-Initialize !-BaseFixture-! instance that provides access to methods defined in !-TempoFixture.java-!:
+- Initialize !-BaseFixture-! instance that provides access to methods defined in !-TempoFixture.java-!:
 
-|script|com.appiancorp.ps.automatedtest.fixture.TempoFixture|
+> |script|com.appiancorp.ps.automatedtest.fixture.TempoFixture|
 
-Initialize !-SitesFixture-! instance that provides access to methods defined in !-SitesFixture.java-!:
+- Initialize !-SitesFixture-! instance that provides access to methods defined in !-SitesFixture.java-!:
 
-|script|com.appiancorp.ps.automatedtest.fixture.SitesFixture|
+> |script|com.appiancorp.ps.automatedtest.fixture.SitesFixture|
 
-Initialize Selenium Web Driver and open an instance of the specified browser:
+- Initialize Selenium Web Driver and open an instance of the specified browser:
 
-|setup with|BROWSER_NAME|browser|
+> |setup with|BROWSER_NAME|browser|
 
-Configure custom login page fields:
+- Configure custom login page fields:
 
-|setup login with username field|<field ID/Name/Value attribute>|and password field|<field ID/Name/Value attribute>|and login button|<field ID/Name/Value attribute>|
+> |setup login with username field|<field ID/Name/Value attribute
+> >|and password field|<field ID/Name/Value attribute
+> >|and login button|<field ID/Name/Value attribute
+> >|
 
 # !3 NAVIGATION METHODS
 Navigate to tempo tab:
