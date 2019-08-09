@@ -2,34 +2,24 @@
 
 ------------------------------------------------------------------------------------------------------------------------------
 # !3 FITNESSE KEYWORDS
-
 ![:
-
 |script   |: This key word must be the first row of every script table
-
 |check    |: If the word 'check' is in the first cell of a row, then a function call follows it. The last cell of the table is the expression we expect to be matched by what the function actually returns.
-
 |check not|: If the word 'check not' is in the first cell of a row, then a function call follows it. The last cell of the table is the expression we expect not to be matched by what the function actually returns.
-
 |ensure   |: If the word 'ensure' is in the first cell, then it should be followed by a function that should return a boolean true for green and false for red.
-
 |reject   |: If the word 'reject' is in the first cell, then it should be followed by a function that should return a boolean false for green and true for red.
-
 |note     |: If the word 'note' is in the first cell, all other cells in that row will be ignored. Also works if the first cell is blank or begins with # or *.
-
 |show     |: If the word 'show' is in the first cell, then it should be followed by a function. A new cell will be added when the test is run, and it will contain the return value of the function.
-
 |$VAR=    |: If a symbol assignment is in the first cell, then it should be followed by a function. The symbol is assigned the value returned by that function.
-
 ]!
 
-#!3 FITNESSE CONFIGURATION
+# !3 FITNESSE CONFIGURATION
 ![:
 !define TEST_SYSTEM {slim}: Use the FitNesse SliM test system to run tests
 !path ${automated.testing.home}/**.jar: Define classpath for fixtures
 ]!
 
-#!3 INITIALIZATION
+# !3 INITIALIZATION
 Initialize !-BaseFixture-! instance that provides access to methods defined in !-BaseFixture.java-!:
 
 |script|com.appiancorp.ps.automatedtest.fixture.BaseFixture|
@@ -50,7 +40,7 @@ Configure custom login page fields:
 
 |setup login with username field|<field ID/Name/Value attribute>|and password field|<field ID/Name/Value attribute>|and login button|<field ID/Name/Value attribute>|
 
-#!3 NAVIGATION METHODS
+# !3 NAVIGATION METHODS
 Navigate to tempo tab:
 
 |click on menu|TEMPO_MENU_NAME|
@@ -59,7 +49,7 @@ Search for a term on News, Reports, or Record List:
 
 |search for|SEARCH_TERM|
 
-#!3 NEWS METHODS
+# !3 NEWS METHODS
 Verify a news post containing specific text is present. The method will wait for the timeout period and refresh up to the configured number of refresh times before failing:
 
 |verify news feed containing text|NEWS_TEXT|is present|
@@ -148,7 +138,7 @@ Filter news feed on supplied filter:
 
 |filter news on|FILTER_NAME|
 
-#!3 TASKS METHODS
+# !3 TASKS METHODS
 Click on the supplied task name:
 
 |click on task|TASK_NAME or TASK_NAME[INDEX]|
@@ -189,8 +179,8 @@ Verify a social task item containing specific text is not present:
 
 |verify task feed containing text|TASK_TEXT|is not present|
 
-#!3 RECORDS METHODS
-##!4 RECORD LIST
+# !3 RECORDS METHODS
+## !4 RECORD LIST
 Click on a record type, use RECORD_NAME[INDEX] to click on the 2nd, 3rd, ... record type with the same label:
 
 |click on record type|RECORD_TYPE_NAME or RECORD_TYPE_NAME[INDEX]|
@@ -223,7 +213,7 @@ Sort a record grid view by column:
 
 |sort record grid by column|COLUMN_NAME|
 
-##!4 RECORD DASHBOARD
+## !4 RECORD DASHBOARD
 Click on a record. Works for both record list view and record grid view:
 
 |click on record|RECORD_NAME or RECORD_NAME[INDEX] or [INDEX]|
@@ -248,8 +238,8 @@ Return data, from a record, as a variable using Java Regular Expression:
 
 |get regex|REGEX|group|GROUP|from record name containing text|RECORD_TEXT|
 
-#!3 REPORTS METHODS
-##!4 REPORT LIST
+# !3 REPORTS METHODS
+## !4 REPORT LIST
 Click on a report:
 
 |click on report|REPORT_NAME or REPORT_NAME[INDEX]|
@@ -262,7 +252,7 @@ Verify a report is not present:
 
 |verify report|REPORT_NAME or REPORT_NAME[INDEX]|is not present|
 
-#!3 ACTIONS METHODS
+# !3 ACTIONS METHODS
 Click on an action. Use index notation to click on the 2nd, 3rd, ... action with the same label:
 
 |click on action|ACTION_NAME or ACTION_NAME[INDEX]|
@@ -287,7 +277,7 @@ Verify an application is not present:
 
 |verify application filter|APPLICATION_NAME|is not present|
 
-#!3 INTERFACE METHODS
+# !3 INTERFACE METHODS
 For populating all types of fields. When populating checkbox, radio, or select fields, [INDICES] can be used.  When populating picker fields the display value must be used:
 
 |populate field|FIELD_LABEL or [INDEX] or FIELD_LABEL[INDEX]|with|VALUE(S)|
@@ -536,7 +526,7 @@ Store in the defined variable the index of the grid that matches that list of he
 
 |$<variable>=|get Grid Index|* ; Header 2|
 
-#!3 SITES METHODS
+# !3 SITES METHODS
 Navigate to an Appian Site:
 
 |navigate to site|SITE_URL|
@@ -561,7 +551,7 @@ Navigate to another site from Sites Discoverability menu:
 
 |use discoverability to navigate to|SITE_NAME|
 
-#!3 UTILITY METHODS
+# !3 UTILITY METHODS
 Initialize Selenium Web Driver and open browser. Options include FIREFOX, CHROME:
 
 |setup with|BROWSER_NAME|browser|
@@ -701,6 +691,8 @@ Logout of Appian site:
 Verify if text is present anywhere in the user interface:
 
 |verify text|TEXT_ON_INTERFACE|is present|
+
+--------------------------------------------------------------------------------------------------------------------------
 
 
 You can use the [editor on GitHub](https://github.com/ViniciusMRocha/fitness-cheat-sheet/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
