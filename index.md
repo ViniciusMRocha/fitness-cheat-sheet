@@ -191,76 +191,76 @@
 
 # !3 RECORDS METHODS
 ## !4 RECORD LIST
-Click on a record type, use RECORD_NAME[INDEX] to click on the 2nd, 3rd, ... record type with the same label:
+- Click on a record type, use RECORD_NAME[INDEX] to click on the 2nd, 3rd, ... record type with the same label:
 
-|click on record type|RECORD_TYPE_NAME or RECORD_TYPE_NAME[INDEX]|
+`|click on record type|RECORD_TYPE_NAME or RECORD_TYPE_NAME[INDEX]|`
 
-Populate a user filter with a value:
+- Populate a user filter with a value:
 
-|populate record type user filter|USER_FILTER_NAME|with|USER_FILTER_VALUE|
+`|populate record type user filter|USER_FILTER_NAME|with|USER_FILTER_VALUE|`
 
-Clear a user filter:
+- Clear a user filter:
 
-|clear record type user filter|USER_FILTER_NAME|
+`|clear record type user filter|USER_FILTER_NAME|`
 
-Page through a record grid view. Options include "First", "Previous", "Next", or "Last":
+- Page through a record grid view. Options include "First", "Previous", "Next", or "Last":
 
-|click on record grid navigation|NAVIGATION_OPTION|
+`|click on record grid navigation|NAVIGATION_OPTION|`
 
-Verify a particular record type user filter is present:
+- Verify a particular record type user filter is present:
 
-|verify record type user filter|USER_FILTER_NAME|is present|
+`|verify record type user filter|USER_FILTER_NAME|is present|`
 
-Verify a record is present:
+- Verify a record is present:
 
-|verify record|RECORD_NAME or RECORD_NAME[INDEX]|is present|
+`|verify record|RECORD_NAME or RECORD_NAME[INDEX]|is present|`
 
-Verify a record is not present:
+- Verify a record is not present:
 
-|verify record|RECORD_NAME or RECORD_NAME[INDEX]|is not present|
+`|verify record|RECORD_NAME or RECORD_NAME[INDEX]|is not present|`
 
-Sort a record grid view by column:
+- Sort a record grid view by column:
 
-|sort record grid by column|COLUMN_NAME|
+`|sort record grid by column|COLUMN_NAME|`
 
 ## !4 RECORD DASHBOARD
-Click on a record. Works for both record list view and record grid view:
+- Click on a record. Works for both record list view and record grid view:
 
-|click on record|RECORD_NAME or RECORD_NAME[INDEX] or [INDEX]|
+`|click on record|RECORD_NAME or RECORD_NAME[INDEX] or [INDEX]|`
 
-Click on a record view:
+- Click on a record view:
 
-|click on record view|VIEW_NAME|
+`|click on record view|VIEW_NAME|`
 
-Click on a related action. Works for quick links and on the related action view:
+- Click on a related action. Works for quick links and on the related action view:
 
-|click on record related action|RELATED_ACTION_NAME|
+`|click on record related action|RELATED_ACTION_NAME|`
 
-Verify a record related action is present:
+- Verify a record related action is present:
 
-|verify record related action|RELATED_ACTION_NAME|is present|
+`|verify record related action|RELATED_ACTION_NAME|is present|`
 
-Verify a record related action is not present:
+- Verify a record related action is not present:
 
-|verify record related action|RELATED_ACTION_NAME|is not present|
+`|verify record related action|RELATED_ACTION_NAME|is not present|`
 
-Return data, from a record, as a variable using Java Regular Expression:
+- Return data, from a record, as a variable using Java Regular Expression:
 
-|get regex|REGEX|group|GROUP|from record name containing text|RECORD_TEXT|
+`|get regex|REGEX|group|GROUP|from record name containing text|RECORD_TEXT|`
 
 # !3 REPORTS METHODS
 ## !4 REPORT LIST
-Click on a report:
+- Click on a report:
 
-|click on report|REPORT_NAME or REPORT_NAME[INDEX]|
+`|click on report|REPORT_NAME or REPORT_NAME[INDEX]|`
 
-Verify a report is present:
+- Verify a report is present:
 
-|verify report|REPORT_NAME or REPORT_NAME[INDEX]|is present|
+`|verify report|REPORT_NAME or REPORT_NAME[INDEX]|is present|`
 
-Verify a report is not present:
+- Verify a report is not present:
 
-|verify report|REPORT_NAME or REPORT_NAME[INDEX]|is not present|
+`|verify report|REPORT_NAME or REPORT_NAME[INDEX]|is not present|`
 
 # !3 ACTIONS METHODS
 Click on an action. Use index notation to click on the 2nd, 3rd, ... action with the same label:
